@@ -24,6 +24,7 @@
     <title>Document</title>
   </head>
   <body onload="reloj()">
+    
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <a class="navbar-brand" href="#">INOTEK</a>
       <button
@@ -46,8 +47,12 @@
           </li>
         </ul>
       </div>
+      <form class="form-inline" action="/action_page.php">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
     </nav>
-    
+
     <div id="demo" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -75,10 +80,51 @@
               </h4>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col bg-primary text-white"><div class="container">
+        <h2>Hoverable Dark Table</h2>
+        <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+      <div class="col bg-warning text-white">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+      </div>
+    </div>
+
     <script type="text/javascript" src="js/reloj.js"></script>
   </body>
 </html>
