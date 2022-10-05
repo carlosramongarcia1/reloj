@@ -26,194 +26,38 @@
 
 <body onload="reloj()">
   <!-- MENU DE NAVEGACION -->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">INOTEK</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Ayuda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sesión</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Opciones
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Link 1</a>
-            <a class="dropdown-item" href="#">Link 2</a>
-            <a class="dropdown-item" href="#">Link 3</a>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <form class="form-inline" action="/action_page.php">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" />
-      <button class="btn btn-success" type="submit">Search</button>
-    </form>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Inotek</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Servicios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Clientes</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Trayectoria
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Historia</a>
+          <a class="dropdown-item" href="#">Misión</a>
+          <a class="dropdown-item" href="#">Visión</a>
+          <a class="dropdown-item" href="#">Valores</a>
+        </div>
+      </li>
+    </ul>
   </nav>
-
-  <!-- CARRUSEL DE IMAGENES -->
-  <div id="demo" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="includes/img/1.jpg" alt="Los Angeles" width="100%" height="500" />
-        <div class="carousel-caption" style="padding: top 0; position: absolute; top: 0; left: 0;">
-          <!-- COLUMNA -->
-          <div class="row">
-            <div class="col-sm-6" style="background-color: transparent;">
-              <!-- FECHA COMPLETA -->
-              <h2 style="padding-top: 3px" class="card-title">
-                <span class="badge badge-pill badge-success" id="Calendario">Zona horaria</span>
-                </h1>
-                <!-- HORA ACTUAL -->
-                <h1 style="padding-top: 16px">
-                  <span class="badge badge-pill badge-success" id="Horas">Hora actual</span>
-                </h1>
-                <!-- CALENDARIO -->
-                <h1 style="padding-top: 16px">
-                  <span class="badge badge-pill badge-success" id="Fecha">Fecha actual</span>
-                </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- COTENEDOR DE CABECERA -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- MODAL 1 -->
-      <div class="col-sm-6"  style="border-style: solid;">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.<br>
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-        <button type="button" class="btn btn-primary"><h1 class="fa fa-truck" aria-hidden="true"></h1></button>
-      </div>
-      <!-- MODAL 2 -->
-      <div class="col-sm-6"  style="border-style: solid;">
-        <!-- COMLUMNA DE INFORMACION -->
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card">
-              <img class="card-img-top" src="includes/img/work.jpg" alt="Card image" style="width:100%">
-              <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                <a href="#" class="btn btn-primary stretched-link">See Profile</a>
-              </div>
-            </div>
-          </div>
-          <!-- FORMULARIO -->
-          <div class="col-sm-6 " style="border-style: solid;">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto. 
-            <div class="container">
-              <h2>Stacked form</h2>
-              <form action="/action_page.php">
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-                </div>
-                <div class="form-group">
-                  <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-                </div>
-                <div class="form-group form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
-            </div>   
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-sm-12" style="border-style: solid;">
-        <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-          Open modal
-        </button>
-          </div>
-        </div>
-        <!-- The Modal -->
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-
-              <!-- Modal Header -->
-              <div class="modal-header">
-                <h4 class="modal-title">Modal Heading</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-
-              <!-- Modal body -->
-              <div class="modal-body">
-                Modal body..
-              </div>
-
-              <!-- Modal footer -->
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-      </div>
-    </div>
-  </div>
-
-<footer>
-  <div class="container-fluid">
-    <h1>Three equal width columns</h1>
-    <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.</p>
-    <div class="row">
-      <div class="col" style="background-color:lavender;">
-        <div class="container mt-3">
-        <h2>Media Object</h2>
-        <p>Create a media object with the .media and .media-body classes:</p>
-        <div class="media border p-3">
-          <img src="includes/img/work.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
-          <div class="media-body">
-            <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>      
-          </div>
-        </div>
-      </div></div>
-
-      <div class="col" style="background-color:orange;">.col</div>
-
-      <div class="col" style="background-color:lavender;"><div class="container">
-        <h2>Form control: textarea</h2>
-        <p>The form below contains a textarea for comments:</p>
-        <form action="/action_page.php">
-          <div class="form-group">
-            <label for="comment">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div></div>
-    </div>
-  </div>
-</footer>
+  <br>
+    
 
 
   <script type="text/javascript" src="js/reloj.js"></script>
