@@ -9,7 +9,7 @@ function reloj() {
     (year = fecha.getFullYear());
   console.log("cargando reloj " + fecha);
 
-  document.getElementById("fecha").textContent = fecha;
+  document.getElementById("Fecha").textContent = fecha;
   document.getElementById("Año").textContent = year;
   document.getElementById("Semana").textContent = "0"+diaSemana +" De";
 
@@ -23,10 +23,12 @@ function reloj() {
 
     if (horas >= 12) {
       let nhoras = horas - 12;
-      document.getElementById("Horas").textContent = "Son las " + nhoras + ":" + minutos + ":" + segundos + " pm";
+      document.getElementById("Horas").textContent = "Son las " + horas + ":" + minutos + ":" + segundos + " pm";
     }
-    if (horas == 0) {
+    else if(horas == 0) {
       horas = 12;
+      document.getElementById("Horas").textContent = "Son las " + horas + ":" + minutos + ":" + segundos + " am";
+    }else{
       document.getElementById("Horas").textContent = "Son las " + horas + ":" + minutos + ":" + segundos + " am";
     }
 

@@ -24,14 +24,15 @@
     <title>Document</title>
   </head>
   <body onload="reloj()">
-    
+    <!-- MENU DE NAVEGACION -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <a class="navbar-brand" href="#">INOTEK</a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#collapsibleNavbar">
+        data-target="#collapsibleNavbar"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -48,84 +49,48 @@
         </ul>
       </div>
       <form class="form-inline" action="/action_page.php">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" />
         <button class="btn btn-success" type="submit">Search</button>
       </form>
     </nav>
 
+    <!-- CARRUSEL DE IMAGENES -->
     <div id="demo" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
-            src="includes/img/work.jpg"
+            src="includes/img/1.jpg"
             alt="Los Angeles"
             width="100%"
             height="500"/>
-          <div class="carousel-caption">
-            <!-- FECHA COMPLETA -->
-            <h5 style="padding-top: 16px" class="card-title">
-              <span class="badge badge-success" id="fecha">Success</span>
-            </h5>
-            <!-- HORA ACTUAL -->
-            <h3 style="padding-top: 16px">
-              <span class="badge badge-success" id="Horas">Success</span>
-            </h3>
-            <!-- CALENDARIO -->
-            <div class="container">
-              <h4 style="padding-top: 16px;">
-                <span class="badge badge-success" id="Dias">Success</span>
-                <span class="badge badge-success" id="Semana">Success</span>
-                <span class="badge badge-success" id="Mes">Success</span>
-                <span class="badge badge-success" id="Año">Success</span>
-              </h4>
+          <div class="carousel-caption" style="padding: top 0; position: absolute; top: 0; left: 0;">
+            <!-- COLUMNA -->
+            <div class="row">
+              <div class="col-sm-6" style="background-color: transparent;">
+                <!-- FECHA COMPLETA -->
+                <h2 style="padding-top: 3px" class="card-title">
+                  <span class="badge badge-pill badge-success" id="Fecha">Success</span>
+                </h1>
+                <!-- HORA ACTUAL -->
+                <h1 style="padding-top: 16px">
+                  <span class="badge badge-pill badge-success" id="Horas">Success</span>
+                </h1>
+                <!-- CALENDARIO -->
+                <div class="container">
+                  <h1 style="padding-top: 16px">
+                    <span class="badge badge-pill badge-success" id="Dias">Success</span>
+                    <span class="badge badge-pill badge-success" id="Semana">Success</span>
+                    <span class="badge badge-pill badge-success" id="Mes">Success</span>
+                    <span class="badge badge-pill badge-success" id="Año">Success</span>
+                  </h1>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col bg-primary text-white"><div class="container">
-        <h2>Hoverable Dark Table</h2>
-        <p>The .table-hover class adds a hover effect (grey background color) on table rows:</p>            
-        <table class="table table-dark table-hover">
-          <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-      <div class="col bg-warning text-white">
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-secondary">Secondary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-      </div>
-    </div>
-
     <script type="text/javascript" src="js/reloj.js"></script>
   </body>
 </html>
-
