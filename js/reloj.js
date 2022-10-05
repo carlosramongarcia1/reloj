@@ -7,7 +7,7 @@ function reloj() {
     (dia = fecha.getDay()),
     (mes = fecha.getMonth()),
     (year = fecha.getFullYear());
-  document.getElementById("Calendario").textContent = fecha;
+  // document.getElementById("Calendario").textContent = fecha;
 
   año = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre"];
   const estaciones = año[mes]; 

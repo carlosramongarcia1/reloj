@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="includes/css/styles.css" />
 
+  <script type="text/javascript" src="js/reloj.js"></script>
+
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
 
@@ -19,15 +21,16 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-  <title>Document</title>
+  <title>INOTEK</title>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="reloj()">
+<body onload="reloj()">
   <!-- MENU DE NAVEGACION -->
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">Inotek</a>
+    <a class="navbar-brand" href="index.html">Inotek</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,28 +38,49 @@
       <!-- Links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="Paginas/Contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="Paginas/Servicios.html" id="navbardrop" data-toggle="dropdown">
+            Servicios
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="Paginas/Servicios.html">Casas inteligentes</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Seguridad</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Control de acceso</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Redes</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Telefonia</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Multimedia</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Sistema de bombeo</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Tecnologias sustentables</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Calentadores</a>
+            <a class="dropdown-item" href="Paginas/Servicios.html">Paginas web</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Servicios</a>
+          <a class="nav-link" href="Paginas/Clientes.html">Clientes</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Clientes</a>
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="Paginas/Trayetoria.html" id="navbardrop" data-toggle="dropdown">
+            Trayectoria
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="Paginas/Trayetoria.html">Historia</a>
+            <a class="dropdown-item" href="Paginas/Trayetoria.html">Misión</a>
+            <a class="dropdown-item" href="Paginas/Trayetoria.html">Visión</a>
+            <a class="dropdown-item" href="Paginas/Trayetoria.html">Valores</a>
+          </div>
         </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Trayectoria
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Historia</a>
-          <a class="dropdown-item" href="#">Misión</a>
-          <a class="dropdown-item" href="#">Visión</a>
-          <a class="dropdown-item" href="#">Valores</a>
-        </div>
-      </li>    
       </ul>
-    </div>  
+    </div>
+    <!-- HORA ACTUAL -->
+    <h4>
+      <span class="badge badge-pill badge-success" id="Fecha">Fecha actual</span>
+    </h4>&nbsp; &nbsp;
+    <h4>
+      <span class="badge badge-pill badge-success" id="Horas">Hora actual</span>
+    </h4>&nbsp; &nbsp;
     <!-- BUSCADOR -->
     <form class="form-inline" action="/action_page.php">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -65,68 +89,583 @@
   </nav>
   <!-- CAROUSEL -->
   <div id="demo" class="carousel slide" data-ride="carousel">
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li>
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-    </ul>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="includes/img/servidor.jpg" alt="Los Angeles" width="100%" height="500">
+        <img src="includes/img/servidor-rack.jpg" alt="Los Angeles" width="100%" height="500">
         <div class="carousel-caption">
           <h3>INOTEK</h3>
           <p>Innovación tecnologica</p>
-        </div>   
-      </div>
-      <div class="carousel-item">
-        <img src="includes/img/servidor-rack.jpg" alt="Chicago" width="100%" height="500">
-        <div class="carousel-caption">
-          <h3>INOTEK</h3>
-          <p>Comprometidos con el medio ambiente</p>
-        </div>   
-      </div>
-      <div class="carousel-item">
-        <img src="includes/img/casa-moderna.jpg" alt="New York" width="100%" height="500">
-        <div class="carousel-caption">
-          <h3>INOTEK</h3>
-          <p>Servicio calidad precio</p>
-        </div>   
+        </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </a>
   </div>
 
-  <div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:70px">
-    <h1>Section 1</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <!-- SECCION 2 INFORMACIÓN -->
+  <div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+    <h1>Trabajos de campo</h1>
+    <div class="container">
+      <h2>Especializados en servicios de infraestructura tecnologica</h2>
+      <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements
+        under the specified parent will be closed when one of the collapsible item is shown.</p>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Servicios administrados de TI
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <!-- Media middle -->
+              <div class="media mt-3">
+                <img src="includes/img/casa-moderna.jpg" class="align-self-center mr-3" style="width:160px">
+                <div class="media-body">
+                  <h4>Media Middle</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                </div>
+              </div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Instalaciones y configuracion de redes
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <!-- Media middle -->
+  <div class="media mt-3">
+    <img src="includes/img/servidor-rack.jpg" class="align-self-center mr-3" style="width:160px">
+    <div class="media-body">
+      <h4>Media Middle</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+   </div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Consultoria y soporte
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <!-- Media middle -->
+  <div class="media mt-3">
+    <img src="includes/img/servidor.jpg" class="align-self-center mr-3" style="width:160px">
+    <div class="media-body">
+      <h4>Media Middle</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+   </div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
-    <h1>Section 2</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+
+  <!-- PRODUCTOS -->
+  <div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+    <h1>Productos</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+
+
+      <div class="container mt-3"> 
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+      </div>      
+      <div class="container-fluid">
+        <h1>Three equal width columns</h1>
+        <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.</p>
+        <div class="row">
+          <div class="col">
+            <div class="container">
+              <div class="card" style="width:400px">
+                <div class="card-body">
+                  <h4 class="card-title">Jane Doe</h4>
+                  <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+                <img class="card-img-bottom" src="includes/img/camara.jpg" alt="Card image" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <div class="card" style="width:400px">
+                <div class="card-body">
+                  <h4 class="card-title">Jane Doe</h4>
+                  <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+                <img class="card-img-bottom" src="includes/img/camara.jpg" alt="Card image" style="width:100%">
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <div class="card" style="width:400px">
+                <div class="card-body">
+                  <h4 class="card-title">Jane Doe</h4>
+                  <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+                <img class="card-img-bottom" src="includes/img/camara.jpg" alt="Card image" style="width:100%">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>     
   </div>
-  <div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
-    <h1>Section 3</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+
+  <!-- COTIZACIONES -->
+  <div id="section41" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+    <h1>Cotizaciones</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+      <div class="container">
+
+        <form>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Persona</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nombres">
+            <input type="text" class="form-control" placeholder="Apellidos">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Empresa o entidad</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Nombre">
+            <input type="text" class="form-control" placeholder="Numero de telefono">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Correo electronico">
+            <div class="input-group-append">
+              <span class="input-group-text">@gmail.com</span>
+            </div>
+          </div>
+          <div class="input-group mt-3 mb-3">
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                Categoria de producto
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Camaras</a>
+                <a class="dropdown-item" href="#">Computadoras</a>
+                <a class="dropdown-item" href="#">Perifericos</a>
+              </div>
+            </div>
+            <input type="text" class="form-control" placeholder="Nombre del producto">
+          </div>
+          <div class="form-group">
+            <label for="comment">Agrega un comentario</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+          <label for="comment">No encontraste el producto? Agrega una foto o imagen</label>
+          <input type="file" class="form-control-file border">
+          <br>
+          <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            Cargando..
+          </button>
+        </form>
+
+      </div>
   </div>
-  <div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
-    <h1>Section 4 Submenu 1</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+
+   <!-- RED SOCIAL -->
+  <div id="section42" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
+    <h1>Red social</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at
+      the navigation bar while scrolling!</p>
+
+      <div class="container mt-3">
+        <h2>Nested Media Objects</h2>
+        <p>Media objects can also be nested (a media object inside a media object):</p><br>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Comentarios..">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">OK</button>  
+            <button class="btn btn-danger" type="button">Cancel</button>  
+           </div>
+        </div>
+      </div>
+
+        <div class="media border p-3">
+          <img src="img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+          <div class="media-body">
+            <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="media p-3">
+              <img src="img_avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+              <div class="media-body">
+                <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="media p-3">
+              <img src="img_avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+              <div class="media-body">
+                <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div> 
+            <div class="media p-3">
+              <img src="img_avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+              <div class="media-body">
+                <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
   </div>
-  <div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
-    <h1>Section 4 Submenu 2</h1>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <!-- SECCION 1 DE INICIO -->
+  <div id="section1" class="container-fluid " style="padding-top:50px;padding-bottom:70px">
+    <h1>Tecnologias de la Información</h1>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- COLUMNA 1 INTRODUCCION -->
+        <div class="col-sm-6">
+          <div class="container" style="background-color: gray;">
+            <h1>Introducción a las tecnologias de la información</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ex eos ratione, explicabo aperiam saepe,
+              similique accusamus maxime sint adipisci enim. Doloribus vel reprehenderit,
+              officia eaque aspernatur et delectus esse. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Dolore pariatur quo, cum non adipisci sit dolores ex! Eum dignissimos, earum nam
+              deleniti officiis nostrum perferendis facere sunt dicta minima possimus.
+
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta modi id molestias accusamus consequuntur,
+              reprehenderit doloremque asperiores non temporibus explicabo dolorum corrupti
+              eveniet. Amet, cupiditate et? Quibusdam rerum quaerat dignissimos? Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Accusamus hic alias repudiandae nulla! Molestias officia
+              debitis ipsa vero reiciendis temporibus, quas a quis, fugiat earum adipisci sint assumenda doloribus
+              aperiam!
+            </p>
+          </div>
+        </div>
+        <!-- NOTICIAS -->
+        <div class="col-sm-6">
+          <h1>Noticias recientes</h1>
+          <!-- RSS NOTICIAS -->
+          <div class="container">
+            <h2>Noticias con RSS</h2>
+            <p>Las noticias presentadas son de caracter tecnologico se pretende solo informar</p>
+            <table class="table table-dark table-hover">
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>john@example.com</td>
+                </tr>
+                <tr>
+                  <td>Mary</td>
+                  <td>Moe</td>
+                  <td>mary@example.com</td>
+                </tr>
+                <tr>
+                  <td>July</td>
+                  <td>Dooley</td>
+                  <td>july@example.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script type="text/javascript" src="js/reloj.js"></script>
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
+
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example21" class="form-control" />
+              <label class="form-label" for="form5Example21">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Link 1</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 2</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 3</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Link 4</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 </body>
-
 </html>
