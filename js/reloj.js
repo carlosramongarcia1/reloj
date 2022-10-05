@@ -7,23 +7,18 @@ function reloj() {
     (dia = fecha.getDay()),
     (mes = fecha.getMonth()),
     (year = fecha.getFullYear());
-  console.log("cargando reloj " + fecha);
-
-  document.getElementById("Fecha").textContent = fecha;
-  document.getElementById("Año").textContent = year;
-  document.getElementById("Semana").textContent = "0"+diaSemana +" De";
+  document.getElementById("Calendario").textContent = fecha;
 
   año = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre"];
-  const estaciones = año[mes];
-  document.getElementById("Mes").textContent = estaciones +" Del"; 
-
+  const estaciones = año[mes]; 
   semana = ["","Lunes","Martes","Miercoles","jueves","Viernes","Sabado","Domingo"];
     const element = semana[dia];
-    document.getElementById("Dias").textContent = "Hoy es " +element;
+
+    document.getElementById("Fecha").textContent = "Hoy es: " + element + " " + diaSemana + " De: " + estaciones + " Del: " +year; 
 
     if (horas >= 12) {
       let nhoras = horas - 12;
-      document.getElementById("Horas").textContent = "Son las " + horas + ":" + minutos + ":" + segundos + " pm";
+      document.getElementById("Horas").textContent = "Son las " + nhoras + ":" + minutos + ":" + segundos + " pm";
     }
     else if(horas == 0) {
       horas = 12;
