@@ -24,24 +24,25 @@
   <title>Document</title>
 </head>
 
-<body onload="reloj()">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" onload="reloj()">
   <!-- MENU DE NAVEGACION -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <a class="navbar-brand" href="#">Inotek</a>
-  
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Servicios</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Clientes</a>
-      </li>
-  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Clientes</a>
+        </li>
       <!-- Dropdown -->
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -53,13 +54,78 @@
           <a class="dropdown-item" href="#">Visión</a>
           <a class="dropdown-item" href="#">Valores</a>
         </div>
-      </li>
-    </ul>
+      </li>    
+      </ul>
+    </div>  
+    <!-- BUSCADOR -->
+    <form class="form-inline" action="/action_page.php">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-success" type="submit">Search</button>
+    </form>
   </nav>
-  <br>
-    
+  <!-- CAROUSEL -->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="includes/img/servidor.jpg" alt="Los Angeles" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>INOTEK</h3>
+          <p>Innovación tecnologica</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="includes/img/servidor-rack.jpg" alt="Chicago" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>INOTEK</h3>
+          <p>Comprometidos con el medio ambiente</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="includes/img/casa-moderna.jpg" alt="New York" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>INOTEK</h3>
+          <p>Servicio calidad precio</p>
+        </div>   
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
 
-
+  <div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:70px">
+    <h1>Section 1</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  <div id="section2" class="container-fluid bg-warning" style="padding-top:70px;padding-bottom:70px">
+    <h1>Section 2</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  <div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
+    <h1>Section 3</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  <div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
+    <h1>Section 4 Submenu 1</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
+  <div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+    <h1>Section 4 Submenu 2</h1>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  </div>
   <script type="text/javascript" src="js/reloj.js"></script>
 </body>
 
